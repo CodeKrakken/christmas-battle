@@ -1,20 +1,9 @@
-require 'sinatra'
+require 'sinatra/base'
 
-get '/random-cat' do
-  @cat_name = ["Tiddles", "Chairman Miaow", "Cheetara"].sample
-  erb :named_cat
-end
+class Battle < Sinatra::Base
+  get '/' do
+    'Hello Battle!'
+  end
 
-get '/' do
-  erb :index
-end
-
-post '/named-cat' do
-  p params
-  @cat_name = params[:name]
-  erb :named_cat
-end
-
-get '/secret' do
-  "They were dead alien robots having a dream all along"
+  run! if app_file == $0
 end
