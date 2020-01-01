@@ -12,7 +12,7 @@ describe Player do
 
   describe "#hit_points" do
     it 'returns the hit points' do
-      expect(bejlo.hit_points).to eq(60)
+      expect(bejlo.hit_points).to eq described_class::DEFAULT_HIT_POINTS
     end
   end
 end
