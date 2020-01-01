@@ -26,9 +26,15 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     @game = $game
+    redirect '/endgame' if @game.passive_player.hit_points <= 10
     @game.attack(@game.passive_player)
     @game.switch_turns
     erb :attack
+  end
+
+  get '/endgame' do
+    @game = $game
+    erb :endgame
   end
 
   run! if app_file == $0

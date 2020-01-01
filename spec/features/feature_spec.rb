@@ -66,3 +66,11 @@ feature 'switching turns' do
     expect(page).to have_content "Bejlo's turn."
   end
 end
+
+feature 'Ending the game' do
+  scenario 'Player 2 can lose' do
+    sign_in_and_play
+    11.times { click_button 'Attack' }
+    expect(page).to have_content "Caxul triumphs."
+  end
+end
