@@ -13,6 +13,11 @@ feature 'Entering names' do
 end
 
 feature 'Hit points' do
+  scenario 'Players can see Player 1\'s hit points' do
+    sign_in_and_play
+    expect(page).to have_content('Caxul - 60 HP')
+  end
+  
   scenario 'Players can see Player 2\'s hit points' do
     sign_in_and_play
     expect(page).to have_content('Bejlo - 60 HP')
