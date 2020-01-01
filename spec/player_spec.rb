@@ -22,4 +22,10 @@ describe Player do
       caxul.attack(bejlo)
     end
   end
+
+  describe '#receive_damage' do
+    it 'reduces the player hit points' do
+      expect(bejlo.receive_damage).to eq(50)
+    end
+  end
 end
