@@ -14,3 +14,13 @@ feature 'Entering names' do
     expect(page).to have_content('Caxul vs Bejlo')
   end
 end
+
+feature 'Hit points' do
+  scenario 'Players can see Player 2\'s hit points' do
+    visit('/')
+    fill_in :player_1_name, with: 'Caxul'
+    fill_in :player_2_name, with: 'Bejlo'
+    click_button('Submit')
+    expect(page).to have_content('60 HP')
+  end
+end
