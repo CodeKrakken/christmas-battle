@@ -10,9 +10,9 @@ describe Player do
     end
   end
 
-  describe "#attack" do
-    it 'damages the player' do
-      expect(bejlo.attack).to eq(50)
+  describe "#hit_points" do
+    it 'returns the hit points' do
+      expect(bejlo.hit_points).to eq(60)
     end
   end
 end
