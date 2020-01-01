@@ -15,4 +15,11 @@ describe Player do
       expect(bejlo.hit_points).to eq described_class::DEFAULT_HIT_POINTS
     end
   end
+
+  describe "#attack" do
+    it 'damages the player' do
+      expect(bejlo).to receive(:receive_damage)
+      caxul.attack(bejlo)
+    end
+  end
 end

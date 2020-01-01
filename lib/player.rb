@@ -8,4 +8,11 @@ class Player
     @hit_points = hit_points
   end
 
+  def attack(opponent)
+    opponent.receive_damage
+  end
+
+  def receive_damage
+  end
+  
 end
