@@ -5,4 +5,8 @@ class Player
     @name = name
   end
 
+  def attack
+    50
+  end
+
 end

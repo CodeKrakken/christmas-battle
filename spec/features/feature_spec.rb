@@ -25,4 +25,6 @@ feature 'Attacking' do
     click_button('Attack')
     expect(page).to have_content('Caxul attacks Bejlo!')
   end
+
+  
 end
