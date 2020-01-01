@@ -3,10 +3,8 @@ class Game
   attr_reader :passive_player
 
   def initialize(player_1, player_2)
-    @player_1 = player_1
-    @player_2 = player_2
-    @active_player = player_1
-    @passive_player = player_2
+    @player_1, @player_2 = player_1, player_2
+    @active_player, @passive_player = player_1, player_2
   end
   
   def attack(player)
@@ -22,9 +20,15 @@ class Game
   end
 
   def switch_turns
-    placeholder = @active_player
-    @active_player = @passive_player
-    @passive_player = placeholder
+    @active_player, @passive_player = @passive_player, @active_player
+  end
+
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+  
+  def self.instance
+    @game
   end
 
 end

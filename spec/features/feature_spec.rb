@@ -33,8 +33,7 @@ feature 'Attacking' do
 
   scenario 'Player 2 can attack player 1' do
     sign_in_and_play
-    click_button('Attack')
-    click_button('Attack')
+    2.times { click_button('Attack') }
     expect(page).to have_content('Bejlo attacks Caxul!')
   end
 
@@ -47,8 +46,7 @@ feature 'Attacking' do
 
   scenario 'reduces Player 1 HP by 10' do
     sign_in_and_play
-    click_button 'Attack'
-    click_button 'Attack'
+    2.times { click_button 'Attack' }
     expect(page).not_to have_content 'Caxul - 60 HP'
     expect(page).to have_content 'Caxul - 50 HP'
   end
