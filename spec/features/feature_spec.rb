@@ -26,7 +26,7 @@ feature 'Attacking' do
     expect(page).to have_content('Caxul attacks Bejlo!')
   end
 
-  scenario 'reduce Player 2 HP by 10' do
+  scenario 'reduces Player 2 HP by 10' do
     sign_in_and_play
     click_button 'Attack'
     expect(page).not_to have_content 'Bejlo - 60 HP'

@@ -16,13 +16,6 @@ describe Player do
     end
   end
 
-  describe "#attack" do
-    it 'damages the player' do
-      expect(bejlo).to receive(:receive_damage)
-      caxul.attack(bejlo)
-    end
-  end
-
   describe '#receive_damage' do
     it 'reduces the player hit points' do
       expect { bejlo.receive_damage }.to change { bejlo.hit_points }.by(-10)
