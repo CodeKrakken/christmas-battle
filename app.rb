@@ -8,10 +8,6 @@ class Battle < Sinatra::Base
     @game = Game.instance
   end
 
-  get '/test' do
-    'Testing Infrastructure Working!'
-  end
-
   get '/' do
     erb :index
   end
