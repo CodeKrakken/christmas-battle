@@ -1,8 +1,10 @@
 class Game
+  attr_reader :active_player
 
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
+    @active_player = player_1
   end
   
   def attack(player)
@@ -15,6 +17,10 @@ class Game
 
   def player_2
     @player_2
+  end
+
+  def switch_turns
+    @active_player == @player_1 ? @active_player = player_2 : @active_player = player_1
   end
 
 end

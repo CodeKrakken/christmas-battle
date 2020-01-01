@@ -33,3 +33,16 @@ feature 'Attacking' do
     expect(page).to have_content 'Bejlo - 50 HP'
   end
 end
+
+feature 'switching turns' do
+  scenario 'starts with Player 1\'s turn' do
+    sign_in_and_play
+    expect(page).to have_content "Caxul's turn."
+  end
+
+  scenario 'switches turn after player attacks' do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_content "Bejlo's turn."
+  end
+end
