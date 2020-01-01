@@ -44,6 +44,14 @@ feature 'Attacking' do
     expect(page).not_to have_content 'Bejlo - 60 HP'
     expect(page).to have_content 'Bejlo - 50 HP'
   end
+
+  scenario 'reduces Player 1 HP by 10' do
+    sign_in_and_play
+    click_button 'Attack'
+    click_button 'Attack'
+    expect(page).not_to have_content 'Caxul - 60 HP'
+    expect(page).to have_content 'Caxul - 50 HP'
+  end
 end
 
 feature 'switching turns' do
