@@ -57,5 +57,6 @@ Usage
 The game runs in the browser. Just run `rackup` in your terminal, and then visit `localhost:whatever-port-rackup-is-running-on` in your browser. You can then "play" the "game".
 
 Screenshot
+---
 
 <img width="1280" alt="Screenshot 2020-01-01 at 23 21 10" src="https://user-images.githubusercontent.com/52076323/71647353-7e88fe80-2ced-11ea-8d14-fb4d54771144.png">
