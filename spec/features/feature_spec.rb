@@ -17,7 +17,7 @@ feature 'Hit points' do
     sign_in_and_play
     expect(page).to have_content('Caxul - 60 HP')
   end
-  
+
   scenario 'Players can see Player 2\'s hit points' do
     sign_in_and_play
     expect(page).to have_content('Bejlo - 60 HP')
@@ -29,6 +29,13 @@ feature 'Attacking' do
     sign_in_and_play
     click_button('Attack')
     expect(page).to have_content('Caxul attacks Bejlo!')
+  end
+
+  scenario 'Player 2 can attack player 1' do
+    sign_in_and_play
+    click_button('Attack')
+    click_button('Attack')
+    expect(page).to have_content('Bejlo attacks Caxul!')
   end
 
   scenario 'reduces Player 2 HP by 10' do
