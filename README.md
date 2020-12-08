@@ -1,7 +1,7 @@
 Battle
 =======
 
-A VERY simple "game" designed to explore and implement the functionality of the MVC pattern and the Request/Response cycle.
+Second version of Makers [challenge](https://github.com/CodeKrakken/battle), this time built solo. A VERY simple "game" designed to explore and implement the functionality of the MVC pattern and the Request/Response cycle.
 
 User stories
 ---
